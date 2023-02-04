@@ -1,9 +1,13 @@
 import _ from "react";
 
-const Logo = () => {
+interface IProps {
+  path: string;
+}
+
+const Logo = ({path}: IProps) => {
     return (
       <div className="logo">
-        <img src={process.env.PUBLIC_URL + '/wolt-logo.jpeg'} alt="Logo" />
+        <img src={path} alt="Logo" />
       </div>
     )
 }

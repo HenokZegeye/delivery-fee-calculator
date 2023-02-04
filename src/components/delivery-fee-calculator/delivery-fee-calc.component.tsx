@@ -4,6 +4,7 @@ import Card from "../ui/Card";
 import Logo from "../ui/Logo";
 
 const BULK_FEE = 1.20;
+const LOGO_PATH = process.env.PUBLIC_URL + '/wolt-logo.jpeg';
 
 const formReducer = (state: any, {target}: any) => {
   return {
@@ -60,7 +61,7 @@ const DeliveryFeeCalcComponent = () => {
 
     return (
         <div className='wrapper'>
-            <Logo />
+            <Logo path={LOGO_PATH}/>
             <Card>
                 <DeliveryFeeCalcForm onSubmit={onSubmit} onInputChange={setFormData}/>
                 <p className="form-item">Delivery Price: {deliveryPrice}€</p>

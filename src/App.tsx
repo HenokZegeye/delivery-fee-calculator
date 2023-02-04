@@ -1,5 +1,5 @@
 import _ from 'react';
-import Wrapper from './components/delivery-fee-calculator/delivery-fee-calc-component';
+import Wrapper from './components/delivery-fee-calculator/delivery-fee-calc.component';
 
 
 function App() {
