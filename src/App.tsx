@@ -62,11 +62,17 @@ function App() {
         <form onSubmit={onSubmit}>
           <div className="form-item">
             <label htmlFor="Cart Value" className='form-label'>Cart Value</label>
-            <input type="number" name='cart_value' placeholder='Enter Cart Value' onChange={setFormData} className="form-control" required/>
+            <div className="flex-start">
+              <span className="unit">€</span>
+              <input type="number" name='cart_value' placeholder='Enter Cart Value' onChange={setFormData} className="form-control no-border-left" required/>
+            </div>
           </div>
           <div className="form-item">
             <label htmlFor="Delivery Distance" className='form-label'>Delivery Distance</label>
-            <input type="number" name='delivery_distance' placeholder="Enter Delivery Distance" onChange={setFormData} className="form-control" required/>
+            <div className="flex-start">
+              <span className="unit">m</span>
+              <input type="number" name='delivery_distance' placeholder="Enter Delivery Distance" onChange={setFormData} className="form-control no-border-left" required/>
+            </div>
           </div>
           <div className="form-item">
             <label htmlFor="Amount of Items" className='form-label'>Amount of Items</label>
