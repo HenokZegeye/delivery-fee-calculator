@@ -27,7 +27,7 @@ p.form-item {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10em auto;
+  flex-direction: column;
 }
 
 .form-item {
@@ -48,7 +48,7 @@ p.form-item {
 
 input {
   box-shadow: none;
-  line-height: 1.5rem;
+  line-height: 1.25rem;
   font-size: 1rem;
   box-sizing: border-box;
   border: 2px solid #ccc;
@@ -106,4 +106,8 @@ input {
 
 form input:focus{
   outline: 0;
+}
+
+.logo {
+  margin: 1rem;
 }

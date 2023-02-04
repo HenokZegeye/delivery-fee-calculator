@@ -58,6 +58,9 @@ function App() {
 
   return (
     <div className='parent-div'>
+      <div className="logo">
+        <img src={process.env.PUBLIC_URL + '/wolt-logo.jpeg'} alt="Logo" />
+      </div>
       <div className="card">
         <form onSubmit={onSubmit}>
           <div className="form-item">
