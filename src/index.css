@@ -33,3 +33,16 @@ code {
   background: rgb(0, 157, 224);
   color: rgb(255, 255, 255);
 }
+
+.logo {
+  margin: 1rem;
+}
+
+.card {
+  border-radius: 10%;
+  border-color: #e3e3e3;
+  border: 1px solid rgba(5, 5, 5, 0.06);
+  padding: 30px;
+  box-shadow: rgb(32 33 37 / 6%) 0px 0px 54px 0px;
+  width: 300px;
+}
