@@ -1,8 +1,10 @@
-import React, { useState, useReducer } from 'react';
+import _, { useState, useReducer } from 'react';
 import './App.css';
-import Button from './components/ui/Button';
+import DeliveryFeeCalcForm from './components/forms/DeliveryFeeCalcForm';
+
 import Card from './components/ui/Card';
 import Logo from './components/ui/Logo';
+import Wrapper from './components/ui/Wrapper';
 
 const BULK_FEE = 1.20;
 
@@ -60,39 +62,13 @@ function App() {
   }
 
   return (
-    <div className='parent-div'>
+    <Wrapper>
       <Logo />
       <Card>
-        <form onSubmit={onSubmit}>
-            <div className="form-item">
-              <label htmlFor="Cart Value" className='form-label'>Cart Value</label>
-              <div className="flex-start">
-                <span className="unit">€</span>
-                <input type="number" name='cart_value' placeholder='Enter Cart Value' onChange={setFormData} className="form-control no-border-left" required/>
-              </div>
-            </div>
-            <div className="form-item">
-              <label htmlFor="Delivery Distance" className='form-label'>Delivery Distance</label>
-              <div className="flex-start">
-                <span className="unit">m</span>
-                <input type="number" name='delivery_distance' placeholder="Enter Delivery Distance" onChange={setFormData} className="form-control no-border-left" required/>
-              </div>
-            </div>
-            <div className="form-item">
-              <label htmlFor="Amount of Items" className='form-label'>Amount of Items</label>
-              <input type="number" name='amount_of_items' placeholder="Enter Amount of Items" onChange={setFormData} className="form-control" required/>
-            </div>
-            <div className="form-item">
-              <label htmlFor="Order Time" className='form-label'>Order Time</label>
-              <input type="datetime-local" name='date' onChange={setFormData} className="form-control" required/>
-            </div>
-            <div className="form-item">
-            <Button label='Calculate Delivery Price'/>
-            </div>
-        </form>
+        <DeliveryFeeCalcForm onSubmit={onSubmit} onInputChange={setFormData}/>
         <p className="form-item">Delivery Price: {deliveryPrice}€</p>
       </Card>
-    </div>
+    </Wrapper>
   );
 }
 

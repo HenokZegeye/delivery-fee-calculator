@@ -1,15 +1,15 @@
 import _, { ReactNode } from "react";
 
 interface IProps {
-    children: ReactNode;
+    childern: ReactNode;
 }
 
-const Card = ({children}: IProps) => {
+const Wrapper = ({children}: any) => {
     return (
-        <div className='card'>
+        <div className='wrapper'>
             {children}
         </div>
     )
 }
 
-export default Card;
+export default Wrapper;
