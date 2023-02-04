@@ -58,26 +58,7 @@ input {
   border-radius: 7px 7px 7px 7px;
 }
 
-.btn {
-  margin-top: 1rem;
-  border: none;
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  font-stretch: normal;
-  font-weight: 700;
-  width: auto;
-  max-width: 100%;
-  cursor: pointer;
-  padding: 0px 1rem;
-  min-height: 3.375rem;
-  border-radius: 0.5rem;
-  background: rgb(0, 157, 224);
-  color: rgb(255, 255, 255);
-}
+
 
 .form-label {
   margin-bottom: 0.25rem;

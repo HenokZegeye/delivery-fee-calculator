@@ -1,5 +1,6 @@
 import React, { useState, useReducer } from 'react';
 import './App.css';
+import Button from './components/ui/Button';
 
 const BULK_FEE = 1.20;
 
@@ -86,7 +87,7 @@ function App() {
             <input type="datetime-local" name='date' onChange={setFormData} className="form-control" required/>
           </div>
           <div className="form-item">
-            <button type='submit' className='btn'>Calculate Delivery Price</button>
+           <Button label='Calculate Delivery Price'/>
           </div>
         </form>
         <p className="form-item">Delivery Price: {deliveryPrice}€</p>
