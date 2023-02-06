@@ -1,5 +1,5 @@
 import _, { useState, useReducer } from "react";
-import { calculatFee } from "../../services/calculator";
+import { calculatFee } from "../../services/delivery-fee-calculator.service";
 import DeliveryFeeCalcForm from "../forms/delivery-fee-calc-form";
 import Card from "../ui/Card";
 import Logo from "../ui/Logo";
@@ -20,7 +20,7 @@ const DeliveryFeeCalcComponent = () => {
   
     const onSubmit = (event: any) => {
       event.preventDefault();
-      const payload = {...formData, date: new Date(formData.date).toISOString()};
+      const payload = {...formData, date: new Date(formData.date)?.toISOString()};
       setDeliveryPrice(calculatFee(payload));    
     }
 

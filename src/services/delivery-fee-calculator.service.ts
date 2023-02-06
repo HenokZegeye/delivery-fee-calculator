@@ -20,7 +20,7 @@ export const get_num_items_fee = (amount_of_items: number): number => {
 }
 
 export const get_small_orders_fee = (cart_value: number): number => {
-    return cart_value < 10 ? 10 - cart_value : 0;
+    return cart_value < 10 ? Math.round(((10 - cart_value) + Number.EPSILON) * 100)/100 : 0;
 }
   
 export const get_fridayrush_fee = (isFridayRush: boolean, total_fee: number) => {
